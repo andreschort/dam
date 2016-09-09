@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Work From Home</string>
+    <string name="menu_main_option_1">Crear una oferta</string>
+    <string name="cb_english">En Ingles</string>
+    <string name="tv_hours">Horas:</string>
+    <string name="tv_rate">Max $/Hora</string>
+</resources>
