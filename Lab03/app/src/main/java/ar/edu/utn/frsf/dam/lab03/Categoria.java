@@ -54,4 +54,8 @@ public class Categoria implements Serializable {
             new Categoria(5,"Mobile Developer")
     };
 
+    @Override
+    public String toString() {
+        return descripcion;
+    }
 }
