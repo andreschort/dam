@@ -8,13 +8,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
-        android:id="@+id/tvCategory" />
+        android:id="@+id/tvCategory"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
-        android:id="@+id/tvTitle" />
+        android:id="@+id/tvTitle"
+        android:textColor="#000000" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -25,21 +27,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_hours"
-            android:id="@+id/tvHour" />
+            android:id="@+id/tvHour"
+            android:textColor="#000000" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvHorasPresupuestadas" />
+            android:id="@+id/tvHorasPresupuestadas"
+            android:textColor="#000000" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_rate"
-            android:id="@+id/tvRate" />
+            android:id="@+id/tvRate"
+            android:textColor="#000000" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvMaxRate" />
+            android:id="@+id/tvMaxRate"
+            android:textColor="#000000" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -56,7 +62,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/tvEndDate" />
+            android:id="@+id/tvEndDate"
+            android:textColor="#000000" />
 
         <CheckBox
             android:layout_width="wrap_content"
