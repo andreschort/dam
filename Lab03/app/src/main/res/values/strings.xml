@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Work From Home</string>
     <string name="menu_main_option_1">Crear una oferta</string>
+    <string name="menu_main_option_2">Ver mis ofertas</string>
+    <string name="menu_main_option_3">Configuracion</string>
+    <string name="menu_main_option_4">Salir</string>
     <string name="cb_english">En Ingles</string>
     <string name="tv_hours">Horas:</string>
     <string name="tv_rate">Max $/Hora</string>
+    <string name="tvIngreseOferta">Ingrese oferta</string>
+    <string name="tvCategoria">Categoria</string>
+    <string name="tvRate">Max $/Hora</string>
+    <string name="tvCurrency">Moneda</string>
+    <string name="tvFechaFin">Fecha fin</string>
+    <string name="cbEnIngles">En Ingles</string>
+    <string name="btGuardar">Guardar</string>
 </resources>

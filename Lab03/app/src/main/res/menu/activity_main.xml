@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/MnuOpc1" android:title="@string/menu_main_option_1"></item>
+    <item android:id="@+id/MnuOpc2" android:title="@string/menu_main_option_2"></item>
+    <item android:id="@+id/MnuOpc3" android:title="@string/menu_main_option_3"></item>
+    <item android:id="@+id/MnuOpc4" android:title="@string/menu_main_option_4"></item>
 </menu>
