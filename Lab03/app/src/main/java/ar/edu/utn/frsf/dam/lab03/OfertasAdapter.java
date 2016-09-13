@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -50,6 +51,17 @@ public class OfertasAdapter extends BaseAdapter {
             holder = new TrabajoViewHolder(row);
             row.setTag(holder);
         }
+
+        row.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                TrabajoViewHolder holder = (TrabajoViewHolder)view.getTag();
+                CharSequence text = holder.title.getText();
+                Toast.makeText(OfertasAdapter.this.context, text, Toast.LENGTH_SHORT).show();
+
+                return true;
+            }
+        });
 
         DecimalFormat df = new DecimalFormat("#.##");
 
