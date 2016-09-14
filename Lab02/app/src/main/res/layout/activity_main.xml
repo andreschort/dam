@@ -11,32 +11,48 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/tv_titulo"
-        android:id="@+id/textView" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ToggleButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/toggleButton"
-        android:textOff="@string/tbt_texto_reserva"
-        android:textOn="@string/tbt_texto_delivery" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tv_titulo"
+            android:id="@+id/tvTitulo" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/tv_horario"
-        android:id="@+id/textView2" />
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleButton"
+            android:textOff="@string/tbt_texto_reserva"
+            android:textOn="@string/tbt_texto_delivery"
+            android:layout_alignParentRight="true"/>
 
-    <Spinner
-        android:layout_width="134dp"
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:spinnerMode="dropdown" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_horario"
+            android:id="@+id/textView2" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
 
     <Switch
         android:layout_width="match_parent"
@@ -47,10 +63,9 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/textView3"
-        android:layout_weight="0.08" />
+        android:layout_height="90dp"
+        android:id="@+id/tvPedido"
+        android:scrollbars="vertical" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -88,25 +103,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bt_agregar"
-            android:id="@+id/button" />
+            android:id="@+id/btAdd" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bt_confirmar"
-            android:id="@+id/button2"
+            android:id="@+id/btConfirm"
             android:layout_gravity="right"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bt_reiniciar"
-            android:id="@+id/button3" />
+            android:id="@+id/btReset" />
     </LinearLayout>
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
         android:id="@+id/listView" />
 
 </LinearLayout>

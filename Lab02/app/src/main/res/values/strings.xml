@@ -13,5 +13,7 @@
     <string name="bt_confirmar">Confirmar Pedido</string>
     <string name="bt_reiniciar">Reiniciar</string>
     <string name="ts_texto">Debe seleccionar algo del menu</string>
-
+    <string name="msg_error_seleccionar_elemento">Debe seleccionar un elemento para agregar</string>
+    <string name="msg_error_add_pedido_confirmado">No es posible agregar el elemento ya que el pedido fue confirmado</string>
+    <string name="msg_error_pedido_confirmado">El pedido ya fue confirmado</string>
 </resources>
