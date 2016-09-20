@@ -187,10 +187,16 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Integer> ids = state.getIntegerArrayList("pedido");
         StringBuilder sb = new StringBuilder();
         String lineSeparator = System.getProperty("line.separator");
+        double precio = 0;
         for(Integer id : ids) {
             ElementoMenu item = findElemento(id);
             pedido.add(item);
+            precio += item.getPrecio();
             sb.append(lineSeparator).append(item.getNombre());
+        }
+
+        if (confirmed) {
+            sb.append(lineSeparator).append(f.format(precio));
         }
         sb.trimToSize();
 
