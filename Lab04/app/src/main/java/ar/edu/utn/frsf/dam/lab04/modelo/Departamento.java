@@ -167,4 +167,19 @@ public class Departamento implements Serializable {
         return _ALOJAMIENTOS_DISPONIBLES;
     }
 
+    public Boolean getNoFumador() {
+        return noFumador;
+    }
+
+    public void setNoFumador(Boolean noFumador) {
+        this.noFumador = noFumador;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
 }
