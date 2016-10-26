@@ -14,4 +14,6 @@
     <string name="tvFechaFin">Fecha fin</string>
     <string name="cbEnIngles">En Ingles</string>
     <string name="btGuardar">Guardar</string>
+    <string name="menu_main_context_apply">Postularme</string>
+    <string name="menu_main_context_share">Compartir</string>
 </resources>

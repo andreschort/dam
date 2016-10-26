@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:longClickable="true">
 
 
     <TextView
@@ -61,6 +62,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Fecha Fin:"
+            android:id="@+id/tv44"
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="New Text"
             android:id="@+id/tvEndDate"
             android:textColor="#000000" />
@@ -68,8 +77,18 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cb_english"
-            android:id="@+id/cbEnglish" />
+            android:id="@+id/cbEnglish"
+            android:clickable="false"
+            android:background="#fff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="En Ingles"
+            android:id="@+id/tvEnIngles"
+            android:textColor="#000000" />
+
+
     </LinearLayout>
 
 </LinearLayout>

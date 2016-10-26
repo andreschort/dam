@@ -53,7 +53,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sbHoras"
+        android:id="@+id/etHoras"
         android:layout_below="@+id/tvHoras"
         android:layout_alignParentStart="true"
         android:inputType="number"/>
@@ -63,13 +63,13 @@
         android:layout_height="wrap_content"
         android:text="@string/tvRate"
         android:id="@+id/tvRate"
-        android:layout_below="@+id/sbHoras"
+        android:layout_below="@+id/etHoras"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sbRate"
+        android:id="@+id/etRate"
         android:layout_below="@+id/tvRate"
         android:layout_alignParentStart="true"
         android:inputType="numberDecimal"/>
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:text="@string/tvCurrency"
         android:id="@+id/tvCurrency"
-        android:layout_below="@+id/sbRate"
+        android:layout_below="@+id/etRate"
         android:layout_alignParentStart="true" />
 
     <RadioGroup
@@ -132,7 +132,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/dpFechaFin"
+        android:id="@+id/etFechaFin"
         android:layout_below="@+id/tvFechaFin"
         android:layout_alignParentStart="true"
         android:inputType="date"/>
@@ -142,7 +142,7 @@
         android:layout_height="wrap_content"
         android:text="@string/cbEnIngles"
         android:id="@+id/cbEnIngles"
-        android:layout_below="@+id/dpFechaFin"
+        android:layout_below="@+id/etFechaFin"
         android:layout_alignParentStart="true" />
 
     <Button

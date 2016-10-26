@@ -1,5 +1,6 @@
 package ar.edu.utn.frsf.dam.lab03;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
@@ -107,25 +108,37 @@ public class Trabajo implements Serializable{
         this.requiereIngles = requiereIngles;
     }
 
-    public static final Trabajo[] TRABAJOS_MOCK= new Trabajo[]{
+    public static final ArrayList<Trabajo> TRABAJOS_MOCK= crearTrabajos();
+
+    private static ArrayList<Trabajo> crearTrabajos() {
+        Trabajo[] mock =
+        new Trabajo[] {
             new Trabajo(1,"Proyecto ABc"),
-            new Trabajo(2,"Sistema de Gestion"),
-            new Trabajo(3, "Aplicacion XYZ"),
-            new Trabajo(4,"Modulo NN1"),
-            new Trabajo(5,"Sistema de adminisracion TDF"),
-            new Trabajo(6,"Aplicacion OYU 66"),
-            new Trabajo(7,"Gestion de laboratorios"),
-            new Trabajo(8,"Sistema Universidades"),
-            new Trabajo(9,"Portal Compras"),
-            new Trabajo(10,"Gestion RRHH"),
-            new Trabajo(11,"Traductor Automatico"),
-            new Trabajo(12,"Alquileres online"),
-            new Trabajo(13,"Gestion financiera"),
-            new Trabajo(14,"Modulo Seguridad"),
-            new Trabajo(15,"consultoria performance"),
-            new Trabajo(16,"Ecommerce Uah"),
-            new Trabajo(17,"Portal Web Htz"),
-            new Trabajo(18,"Sitio Coroporativo"),
-            new Trabajo(19,"Aplicacion www1")
-    };
+                    new Trabajo(2,"Sistema de Gestion"),
+                    new Trabajo(3, "Aplicacion XYZ"),
+                    new Trabajo(4,"Modulo NN1"),
+                    new Trabajo(5,"Sistema de adminisracion TDF"),
+                    new Trabajo(6,"Aplicacion OYU 66"),
+                    new Trabajo(7,"Gestion de laboratorios"),
+                    new Trabajo(8,"Sistema Universidades"),
+                    new Trabajo(9,"Portal Compras"),
+                    new Trabajo(10,"Gestion RRHH"),
+                    new Trabajo(11,"Traductor Automatico"),
+                    new Trabajo(12,"Alquileres online"),
+                    new Trabajo(13,"Gestion financiera"),
+                    new Trabajo(14,"Modulo Seguridad"),
+                    new Trabajo(15,"consultoria performance"),
+                    new Trabajo(16,"Ecommerce Uah"),
+                    new Trabajo(17,"Portal Web Htz"),
+                    new Trabajo(18,"Sitio Coroporativo"),
+                    new Trabajo(19,"Aplicacion www1")
+        };
+
+        ArrayList<Trabajo> jobs = new ArrayList<>();
+        for (Trabajo trabajo : mock) {
+            jobs.add(trabajo);
+        }
+
+        return jobs;
+    }
 }

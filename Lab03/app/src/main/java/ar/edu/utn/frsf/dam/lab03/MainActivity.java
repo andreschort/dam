@@ -3,6 +3,7 @@ package ar.edu.utn.frsf.dam.lab03;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,9 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        OfertasAdapter adapter = new OfertasAdapter(this.getApplicationContext(), Trabajo.TRABAJOS_MOCK);
+        OfertasAdapter adapter = new OfertasAdapter(this.getApplicationContext(), Trabajo.TRABAJOS_MOCK.toArray(new Trabajo[Trabajo.TRABAJOS_MOCK.size()]));
         ListView listVIew = (ListView) this.findViewById(R.id.listView);
         listVIew.setAdapter(adapter);
+
+        registerForContextMenu(listVIew);
     }
 
     @Override
@@ -43,7 +46,25 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         super.onActivityResult(requestCode, resultCode, data);
+
+        OfertasAdapter adapter = new OfertasAdapter(this.getApplicationContext(), Trabajo.TRABAJOS_MOCK.toArray(new Trabajo[Trabajo.TRABAJOS_MOCK.size()]));
+        ListView listVIew = (ListView) this.findViewById(R.id.listView);
+        listVIew.setAdapter(adapter);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+
+        if (v.getId() == R.id.listView) {
+            ListView lv = (ListView) v;
+
+            AdapterView.AdapterContextMenuInfo acmi = (AdapterView.AdapterContextMenuInfo) menuInfo;
+            Trabajo job = (Trabajo) lv.getItemAtPosition(acmi.position);
+            menu.setHeaderTitle(job.getDescripcion());
+            menu.add(R.string.menu_main_context_apply);
+            menu.add(R.string.menu_main_context_share);
+        }
     }
 }

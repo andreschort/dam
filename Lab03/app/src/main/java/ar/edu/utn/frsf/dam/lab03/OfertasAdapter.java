@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 
 /**
  * Created by gabriel on 9/8/2016.
@@ -51,7 +52,7 @@ public class OfertasAdapter extends BaseAdapter {
             holder = new TrabajoViewHolder(row);
             row.setTag(holder);
         }
-
+/*
         row.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -62,7 +63,7 @@ public class OfertasAdapter extends BaseAdapter {
                 return true;
             }
         });
-
+*/
         DecimalFormat df = new DecimalFormat("#.##");
 
         Trabajo job = this.jobs[position];
@@ -70,9 +71,13 @@ public class OfertasAdapter extends BaseAdapter {
         holder.title.setText(job.getDescripcion());
         holder.horasPresupuestadas.setText(job.getHorasPresupuestadas().toString());
         holder.maxRate.setText(df.format(job.getPrecioMaximoHora()));
-        holder.english.setEnabled(false);
         holder.english.setChecked(job.getRequiereIngles());
+        if (!job.getRequiereIngles()) {
+            holder.enIngles.setVisibility(View.GONE);
+        }
 
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        holder.endDate.setText(format.format(job.getFechaEntrega()));
         switch (job.getMonedaPago()){
             case 1:
                 holder.currency.setImageResource(R.drawable.us);

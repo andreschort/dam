@@ -16,6 +16,7 @@ public class TrabajoViewHolder {
     TextView endDate;
     ImageView currency;
     CheckBox english;
+    TextView enIngles;
 
     public TrabajoViewHolder(View base) {
         category = (TextView) base.findViewById(R.id.tvCategory);
@@ -25,5 +26,6 @@ public class TrabajoViewHolder {
         endDate = (TextView) base.findViewById(R.id.tvEndDate);
         currency = (ImageView) base.findViewById(R.id.ivCurrency);
         english = (CheckBox) base.findViewById(R.id.cbEnglish);
+        enIngles = (TextView) base.findViewById(R.id.tvEnIngles);
     }
 }
