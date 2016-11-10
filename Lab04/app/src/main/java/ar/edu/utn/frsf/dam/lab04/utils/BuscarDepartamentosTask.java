@@ -26,6 +26,7 @@ public class BuscarDepartamentosTask extends AsyncTask<FormBusqueda,Integer,List
 
     @Override
     protected void onPostExecute(List<Departamento> departamentos) {
+        listener.busquedaFinalizada(departamentos);
     }
 
     @Override
@@ -56,11 +57,28 @@ public class BuscarDepartamentosTask extends AsyncTask<FormBusqueda,Integer,List
     }
 
     private boolean complies(Departamento d, FormBusqueda b) {
-        boolean precioComplies = d.getPrecio() <= b.getPrecioMaximo() && d.getPrecio() >= b.getPrecioMinimo();
-        boolean ciudadComplies = d.getCiudad().equals(b.getCiudad());
-        boolean fumadorComplies = d.getNoFumador() != b.getPermiteFumar();
-        boolean capacidadComplies = d.getCapacidadMaxima() >= b.getHuespedes();
+        if (b.getPrecioMaximo() != null && d.getPrecio() > b.getPrecioMaximo())
+            return false;
 
-        return precioComplies && ciudadComplies && fumadorComplies && capacidadComplies;
+        if (b.getPrecioMinimo() != null && d.getPrecio() < b.getPrecioMinimo())
+            return false;
+
+        if (b.getCiudad() != null){
+            if (d.getCiudad() == null) {
+                return false;
+            }
+
+            if (!b.getCiudad().getId().equals(d.getCiudad().getId())) {
+                return false;
+            }
+        }
+
+        if (b.getPermiteFumar() && d.getNoFumador())
+            return false;
+
+        if (b.getHuespedes() != null && d.getCapacidadMaxima() < b.getHuespedes())
+            return false;
+
+        return true;
     }
 }

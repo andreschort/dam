@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -53,7 +54,17 @@ public class ListaDepartamentosActivity extends AppCompatActivity implements Bus
 
     @Override
     public void busquedaFinalizada(List<Departamento> listaDepartamento) {
-        //TODO implementar
+        departamentosAdapter.clear();
+        departamentosAdapter.addAll(listaDepartamento);
+        listaAlojamientos.invalidate();
+        listaAlojamientos.invalidateViews();
+        departamentosAdapter.notifyDataSetChanged();
+
+        listaAlojamientos.destroyDrawingCache();
+        listaAlojamientos.setVisibility(ListView.INVISIBLE);
+        listaAlojamientos.setVisibility(ListView.VISIBLE);
+        listaAlojamientos.refreshDrawableState();
+        ((BaseAdapter) listaAlojamientos.getAdapter()).notifyDataSetChanged();
     }
 
     @Override
